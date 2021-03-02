@@ -1,0 +1,127 @@
+*{margin:0; padding: 0;}
+
+.index-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.weddings {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.weddings .nav-banner {
+    width: 65%;
+    height: 20%;
+    display: block;
+
+}
+.weddings .nav-banner .banner-title {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+.weddings .nav-banner .banner-title{
+    color: black;
+}
+.weddings .nav-banner .banner-title{
+    display: flex;
+    flex-direction: column;
+    
+}
+.weddings .nav-banner .banner-title::after{
+    content: '';
+    width: 18%;
+    height: 2px;
+    background-color: black;
+}
+.weddings .nav-banner .banner-title::before{
+    content: 'A small collection of some of the most emotional wedding services.';
+    width: 100%;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weddings .weddings-album {
+    width: 65%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.weddings .weddings-album.disable-scrollbars::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+}
+.weddings .weddings-album .album-col2 {
+    width: 48%;
+    height: 100%;
+    position: relative;
+    margin-top: 5%;
+    cursor: pointer;
+
+}
+.weddings .weddings-album .album-col2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.weddings .weddings-album .album-col2 .intro {
+    position: absolute;
+    width: 80%;
+    height: 20%;
+    bottom: 8%;
+    left: 10%;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.weddings .weddings-album .album-col2 .intro h4{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.weddings .weddings-album .album-col2 .intro h4::before {
+    content: 'APRIL 29, 2020';
+    font-size: 20px;
+    color: red;
+    margin-bottom: 10px;
+}
+.weddings .weddings-album .album-col2 .intro h4::after {
+    content: '';
+    width: 0;
+    margin-top: 10px;
+    height: 2px;
+    background-color: black;
+    opacity: 0;
+}
+.weddings .weddings-album .album-col2:hover .intro h4::after {
+    animation: lineRight 1s forwards;
+}
+@keyframes lineRight {
+    0% {opacity: 0; width: 0; }
+    100% {opacity: 1; width: 100%; }
+}
+.weddings .weddings-album .album-col2:hover img {
+    transform: scale(0.95);
+    transition: 1s;
+}

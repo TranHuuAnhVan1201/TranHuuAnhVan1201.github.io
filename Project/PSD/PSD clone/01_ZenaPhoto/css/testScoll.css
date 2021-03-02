@@ -1,0 +1,5 @@
+p:before {
+    content: attr(data-before);
+    color: red;
+    cursor: pointer;
+}

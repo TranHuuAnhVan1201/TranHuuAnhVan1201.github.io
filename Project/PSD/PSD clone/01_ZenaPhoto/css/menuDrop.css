@@ -1,0 +1,97 @@
+*{margin: 0; padding: 0;}
+body,html, .menu-container{
+    width: 100vw; 
+    height: 100vh;
+}
+.menu-drop {
+    overflow: hidden;
+    position: relative;
+    width: 98%;
+    left: 2%;
+    cursor: pointer;
+}
+.menu-drop .content-hide {
+    width: 100%;
+}
+
+
+.menu-drop .content-hide:hover h1{
+    opacity: 0.5;
+}
+.menu-drop .content-hide .icon-content-hide {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.icon-content-hide h1 {
+    font-size: 40px;
+    line-height: 60px;
+    color: white;
+}
+.icon-plus {
+    width: 10%;
+    height: 100%; 
+    margin: 0; padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+ 
+}
+.icon-plus::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.2s;
+}
+.icon-plus::before {
+    content: '';
+    width: 2px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    transition: all 0.2s;
+}
+.icon-plus.active-icon-plus-1::after {
+    transform: rotate(-90deg); 
+    opacity: 0;
+}
+.icon-plus.active-icon-plus-1::before {
+    transform: rotate(-90deg);
+}
+.icon-plus.active-icon-plus-2::after {
+    transform: rotate(0);
+    opacity: 1;
+}
+.icon-plus.active-icon-plus-2::before {
+    transform: rotate(0);
+}
+
+.menu-drop li {
+    width: 100%;
+    font-size: 30px;
+    height: 40px;
+    line-height: 40px;
+    list-style-type: none;
+
+    transition: all 2s;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+.menu-drop a {
+    display: block;
+    text-decoration: none;
+}
+.menu-drop .content-hide.active-menu-drop > li {
+    transition: all 1s;
+    opacity: 1; 
+    display: block;  
+    height: auto;
+    margin-left: 15%;
+}

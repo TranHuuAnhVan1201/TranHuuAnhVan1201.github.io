@@ -1,0 +1,8 @@
+.page .header.navbar-fixed {
+    background: yellowgreen;
+    width: 100%;
+    height: 8rem;
+    z-index: 1;
+    transition: 0.4s ease;
+}
+
